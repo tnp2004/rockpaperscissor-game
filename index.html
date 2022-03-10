@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>This game is eazy</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head-text">
+            <h1>R P S Game</h1>
+        </div>
+        <div class="box-btn">
+            <button class="rps-btn" id="rock-btn">
+                <span id="rock-input">rock</span>
+                <img src="../rockpaperscissors/src/rock.png" alt="rock"></button>
+            <button class="rps-btn" id="paper-btn">
+                <span id="paper-input">paper</span>
+                <img src="../rockpaperscissors/src/paper.png" alt="paper"></button>
+            <button class="rps-btn" id="scissor-btn">
+                <span id="scissor-input">scissor</span>
+                <img src="../rockpaperscissors/src/scissors.png" alt="scissors"></button>
+        </div>
+        <div class="display-result">
+            <h3 id="result">Result</h3>
+            <h2>you: <span id="you-result"></span> | bot: <span id="bot-result"></span></h2>
+        </div>
+        <div class="count">
+            <span id="win">Win = 0</span><br>
+            <span id="lose">Lose = 0</span><br>
+            <span id="draw">Draw = 0</span>
+            <h4 id="round">Round:0</h4>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
