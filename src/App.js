@@ -4,6 +4,7 @@ import GameDisplay from './Components/GameDisplay';
 import { useState } from 'react';
 
 function App() {
+  const [currentData, setCurrentData] = useState({})
   const [battleData, setBattleData] = useState([])
   const formData = {
     Player:'',
@@ -12,10 +13,6 @@ function App() {
   }
 
   const Selected = (answer) => {
-    gameLogic(answer)
-  }
-
-  const gameLogic = (answer) => {
     switch(answer) {
       case "ROCK":
         return Rock(botAnswer())
@@ -69,7 +66,7 @@ function App() {
         formData.Result = "LOSE"
       }
     }else formData.Result = "DRAW"
-    
+    setCurrentData(formData)
     setBattleData((prevData) => {
       return [formData, ...prevData]
      })
@@ -86,7 +83,7 @@ function App() {
       <div className='my-20 mx-auto text-center'>
         <h1 className='text-5xl'>RockPaperScissor</h1>
       </div>
-      <GameDisplay battleData={battleData} />
+      <GameDisplay currentData={currentData} />
       <GameButton getAnswer={Selected} />
     </div>
   );
