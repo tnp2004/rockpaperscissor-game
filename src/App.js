@@ -1,7 +1,8 @@
 import './App.css';
 import GameButton from './Components/GameButton';
 import GameDisplay from './Components/GameDisplay';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import ScoreBoard from './Components/ScoreBoard';
 
 function App() {
   const [currentData, setCurrentData] = useState({})
@@ -78,11 +79,17 @@ function App() {
     return answerArray[random]
   }
 
+  const winCount = battleData.filter(item => item.Result == "WIN").map(item => item.Result).length
+  const loseCount = battleData.filter(item => item.Result == "LOSE").map(item => item.Result).length
+  const drawCount = battleData.filter(item => item.Result == "DRAW").map(item => item.Result).length
+  const scoreData = {win: winCount, lose: loseCount, draw: drawCount}
+
   return (
     <div className="container mx-auto">
       <div className='my-20 mx-auto text-center'>
         <h1 className='text-5xl'>RockPaperScissor</h1>
       </div>
+      <ScoreBoard score={scoreData} />
       <GameDisplay currentData={currentData} />
       <GameButton getAnswer={Selected} />
     </div>
