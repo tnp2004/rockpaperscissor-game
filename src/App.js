@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import GameButton from './Components/GameButton';
 import GameDisplay from './Components/GameDisplay';
 import { useEffect, useState } from 'react';
@@ -90,7 +90,7 @@ function App() {
         <h1 className='text-5xl'>RockPaperScissor</h1>
       </div>
       <ScoreBoard score={scoreData} />
-      <GameDisplay currentData={currentData} />
+      <GameDisplay currentData={currentData} score={scoreData} />
       <GameButton getAnswer={Selected} />
     </div>
   );

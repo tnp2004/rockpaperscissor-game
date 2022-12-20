@@ -15,3 +15,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@layer base {
+  .WIN {
+    @apply text-green-600
+  }
+
+  .LOSE {
+    @apply text-rose-600
+  }
+
+  .DRAW {
+    @apply text-blue-700
+  }
+}
