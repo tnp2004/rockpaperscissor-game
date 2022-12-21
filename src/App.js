@@ -86,7 +86,7 @@ function App() {
 
   return (
     <div className="container mx-auto">
-      <div className='my-20 mx-auto text-center'>
+      <div className='my-20 mx-auto text-center border w-1/3 bg-slate-100 border-2 border-sky-500 border-dashed'>
         <h1 className='text-5xl'>RockPaperScissor</h1>
       </div>
       <ScoreBoard score={scoreData} />

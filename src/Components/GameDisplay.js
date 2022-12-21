@@ -31,7 +31,7 @@ const GameDisplay = (props) => {
   }, [currentData])
   console.log("=>", currentData);
   return (
-    <div className="border-double border-4 border-sky-500 mx-auto w-4/6 my-20 text-center p-5">
+    <div className="border-solid border-2 border-sky-500 mx-auto w-4/6 my-20 text-center p-5 bg-slate-100">
       <h2 className="text-4xl font-bold">
         <span className="text-rose-600">{win}</span> - <span className="text-blue-700">{lose}</span>
         </h2>
